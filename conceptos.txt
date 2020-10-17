@@ -1,0 +1,7 @@
+Conceptos:
+
+- Instalar SQLAlchemy -> pip install SQLAlchemy
+- Instalar psycopg2 -> pip install psycopg2
+- Instalar psycopg2-binary -> pip install psycopg2-binary
+- Utilizar código python para acceder a bases de datos
+-
