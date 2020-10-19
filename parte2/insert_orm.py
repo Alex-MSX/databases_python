@@ -1,4 +1,6 @@
 import csv
+import os
+
 from flask import Flask, render_template, request
 from models import *
 
@@ -8,7 +10,9 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 
 def main():
-    f = open(r"C:\Users\Carlos Ortiz\Desktop\flights.csv")
+    ruta = os.path.join(os.path.join(os.path.join(os.path.join(os.environ['USERPROFILE'])),'Desktop'),'flights.csv')
+    f = open(ruta)
+
     reader = csv.reader(f)
 
     for origin, destination, duration in reader:

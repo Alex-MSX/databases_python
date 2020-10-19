@@ -1,4 +1,5 @@
 import csv
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
@@ -6,7 +7,8 @@ engine = create_engine("postgres+psycopg2://postgres:ams253526370@localhost:5432
 db = scoped_session(sessionmaker(bind=engine))
 
 def main():
-    f = open(r"C:\Users\Carlos Ortiz\Desktop\flights.csv")
+    ruta = os.path.join(os.path.join(os.path.join(os.path.join(os.environ['USERPROFILE'])),'Desktop'),'flights.csv')
+    f = open(ruta)
     reader = csv.reader(f)
 
     for o, dest, dur in reader:
