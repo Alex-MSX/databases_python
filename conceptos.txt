@@ -1,7 +1,20 @@
 Conceptos:
 
+Parte 1
 - Instalar SQLAlchemy -> pip install SQLAlchemy
 - Instalar psycopg2 -> pip install psycopg2
 - Instalar psycopg2-binary -> pip install psycopg2-binary
 - Utilizar código python para acceder a bases de datos
--
+- Uso de clases para crear objetos que utilicen métodos y propiedades
+
+Parte 2:
+- Reemplazar metodología por clases
+- Instalar sqlalchemy -> pip install Flask-SQLAlchemy
+- Introducción a models.py en donde para cada tabla creamos una clase
+- Introducción al reemplazo entre lenguaje SQL y lenguaje ORM
+- Crear relaciones entre tablas (tabla padre a hija o viceversa)
+
+  passengers = db.relationship("Passenger", backref="flight", lazy=True)
+  flight.passengers -> me da todos los pasajeros de ese vuelo
+  passenger.flight -> gracias a backref me da el vuelo de ese pasajero
+  
