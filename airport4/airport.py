@@ -21,8 +21,7 @@ def book():
 
     passenger = Passenger.query.filter_by(name=name).first()
 
-    dict = {"flight":flight, "passenger":passenger}
-    return render_template("book.html", dict=dict)
+    return render_template("book.html", passenger=passenger)
 
 @app.route("/flights")
 def flights():
